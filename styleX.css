@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;600;700&display=swap');
+
+*, *::before, *::after{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+body{
+  font-family: 'Familjen Grotesk', sans-serif;
+    background: black;
+    color: white;
+    font-weight: bold;
+ }
+ *{
+  scroll-behavior: smooth;
+ }
+ a{
+   text-decoration: none;
+   color: white;
+ }
+ ul{
+   list-style: none;
+ }
+ .header_main{
+   position: fixed;
+   display: flex;
+   left: 0px;
+   top: 0;
+   width: 100%;
+   z-index: 3;
+   justify-content: space-between;
+   align-items: center;
+   text-transform: uppercase;
+   height: 100px;
+   padding: 0 30px;
+ }
+ .logo{
+   width: 210px;
+   height: auto;
+ }
+ .logo_img{
+   display: block;
+   width: 100%;
+   height: auto;
+ }
+ .main_menu{
+   margin-right: 50px;
+ }
+ .main_menu ul{
+   display: flex;
+ }
+ .main_menu ul li{
+   position: relative;
+   margin-right: 20px;
+   padding-bottom: 2px;
+ }
+ .main_menu ul li a::after{
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 1px;
+   background: white;
+   transform: scaleX(0);
+   transition: transform 0.6s cubic-bezier(.25,1,.25,1) ;
+   transform-origin: right center ;
+ }
+ .main_menu ul li a:hover::after{
+   transform: scaleX(1);
+   transform-origin: left center;
+   transition-duration: 0.4s;
+ }
+ .section_a{
+   background-image: url(img/upcoming.jpg);
+ }
+ section{
+   position: relative;
+   height: 100vh;
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   text-transform: uppercase;
+
+ }
+ .section_in{
+   position: absolute;
+   bottom: 125px;
+   left: 88px;
+   max-width: 560px;
+ }
+ .section_in h4{
+   font-size: 22px;
+   margin-bottom: 5px;
+   font-weight: 300;
+   animation: fadeup 0.5s ease-out;
+   animation-fill-mode: both;
+ }
+ .section_in h2{
+   font-size: 50px;
+   font-weight: 700;
+   margin-bottom: 20px;
+   animation: fadeup 0.5s ease-in-out 0.2s;
+   animation-fill-mode: both;
+ }
+ .btn{
+   position: relative;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+   min-width: 130px; 
+   padding: 15px 50px;
+   margin-top: 10px;
+   border: 2px solid white;
+   text-transform: uppercase;
+   font-weight: bold;
+   overflow: hidden;
+   z-index: 2;
+ }
+ .btn:hover span{
+   color: black;
+ }
+ .section_in a {
+  animation: fadeup 0.5s ease-in-out 0.4s;
+  animation-fill-mode: both;
+ }
+ .btn .hover{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: white;
+   color: black;
+   z-index: -1;
+   transform: translateY(100%);
+   transition: transform 0.7s cubic-bezier(.25,1,.25,1) ;
+ }
+ .btn:hover .hover{
+   transform: translateY(0);
+ }
+
+ footer{
+  position: relative;
+  padding: 55px 0;
+  
+ }
+ footer ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+ }
+ footer ul li{
+  margin-right: 30px;
+  color: #aaa;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 2.5;
+
+ }
+ footer ul li a{
+  color: white;
+  transition: color 0.6s;
+ }
+ footer ul li a:hover{
+  color: #aaa;
+ }
+.hamburger{
+  position: fixed;
+  top: 40px;
+  right: 20px;
+  z-index: 10;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  
+
+}
+.hamburger-top,  .hamburger-middle, .hamburger-bottom{
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: white;
+  transition: all 0.5s ;
+}
+.hamburger-middle{
+  transform: translateY(5px);
+}
+.hamburger-bottom{
+  transform: translateY(10px);
+}
+/* when hamburger open it turns to x*/
+.open{
+  transform: rotate(90deg);
+}
+.open .hamburger-top{
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+.open .hamburger-middle{
+  display: none;
+}
+.open .hamburger-bottom{
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+.overlay-show{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 3;
+}
+.no-scroll{
+  overflow: hidden;
+}
+.lists-only{
+  display: none;
+}
+.section_a0{
+  background-image: url(img/img1.jpg);
+}
+
+ .section_b{
+  background-image: url(img/falcon9.jpg);
+}
+.section_c{
+  background-image: url(img/falcon_heavy.jpg);
+}
+.section_d{
+  background-image: url(img/dragon.jpg);
+}
+.section_e{
+  background-image: url(img/starship.jpg);
+}
+.section_f{
+  background-image: url(img/human\ spflit.webp);
+}
+.section_g{
+  background-image: url(img/rideshare.jpg);
+}
+.section_h{
+  background-image: url(img/starshield.webp);
+}
+.section_i{
+  background-image: url(img/starlink.webp);
+}
+.main-menu-lists{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100%;
+  background: #000;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100%);
+  transition: transform 0.6s cubic-bezier(.25,1,.25,1);
+}
+
+.show_lists{
+  transform: translateX(0);
+}
+
+.main-menu-lists ul{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content:center;
+  padding: 50px;
+  width: 100%;
+}
+
+.main-menu-lists ul li{
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-bottom: 1px #555 dotted;
+  width: 100%;
+  text-align: right;
+  padding-bottom: 8px;
+}
+
+.main-menu-lists ul li a{
+  color: white;
+  transition: color 0.6s;
+}
+
+.main-menu-lists ul li a:hover{
+  color: #aaa;
+}
+
+
+@keyframes fadeup{
+  from {
+    opacity: 0;
+    transform: translateY(140px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+ }
+
+@media (max-width: 960px){
+  /* for hide nav bar */
+  .main_menu{
+    display: none;
+  }
+  .logo{
+    width: 150px;
+    margin: auto;
+  }
+  .lists-only{
+    display: block;
+  }
+  .section_in h2{
+    font-size: 40px;
+  }
+}
+@media (max-width:600px){
+  /* for inner section move left */
+  .section_in{
+    bottom: 75px;
+    left: 20px;
+  }
+  
+  footer ul li:first-child{
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  footer ul li{
+    margin-right: 10px;
+  }
+  
+}
